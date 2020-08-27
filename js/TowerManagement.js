@@ -2,7 +2,7 @@ import * as PIXI from 'pixi.js'
 import { Tower } from './tower'
 import { stageMatrix } from './matrix'
 import LevelManagement from './level'
-import Vector  from './collision-detection/Vector'
+import Vector  from './Vector'
 
 export default class TowerManagement {
   constructor({sprite, x, y, price, shootSpeed, range, damage}, app) {

@@ -1,7 +1,7 @@
 import * as PIXI from 'pixi.js'
 import bullet from 'img/bullet.png'
 import LevelManagement from './level'
-import Vector from './collision-detection/Vector';
+import Vector from './Vector';
 
 export class Bullet{
   constructor(x, y, target, tower, app) {

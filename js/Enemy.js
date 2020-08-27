@@ -2,7 +2,7 @@ import * as PIXI from 'pixi.js'
 import enemy from 'img/enemy.png'
 import LevelManagement from './level'
 import { pathMatrix, exampleMatrix } from './matrix'
-import Vector  from './collision-detection/Vector'
+import Vector  from './Vector'
 
 export class Enemy{
   constructor(x, y, hp, speed, id, app) {
