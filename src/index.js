@@ -1,14 +1,14 @@
-// import { setup } from '../js/setup'
+import { setup } from '../js/setup'
 
 
 function component (event) {
   console.log('hello', )
-  // const element = document.getElementById('gameDiv');
+  const element = document.getElementById('gameDiv');
 
-  // setup()
+  setup()
  
 
-  // return element;
+  return element;
 }
 component()
 
