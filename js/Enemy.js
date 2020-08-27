@@ -1,5 +1,5 @@
 import * as PIXI from 'pixi.js'
-import enemy from 'img/enemy.png'
+import enemy from 'img/bug.png'
 import LevelManagement from './level'
 import { pathMatrix, exampleMatrix } from './matrix'
 import Vector  from './Vector'
