@@ -1,6 +1,5 @@
 import bunny from 'img/bunny.png'
 import mapbackground from 'img/motherboard.png'
-import floortileset from 'img/floortileset.png'
 import * as PIXI from 'pixi.js'
 import TowerManagement from './TowerManagement'
 import {UIWave} from './UIWave'
