@@ -28,7 +28,7 @@ export class Enemy{
   }
 
   drawRange(){
-    // const graphics = new PIXI.Graphics();
+    this.graphic.clear()
     this.graphic.lineStyle(2, 0xFEEB77, 1);
     this.graphic.drawCircle(this.pos.x - 32, this.pos.y - 32, this.range);
     this.graphic.endFill();
@@ -82,6 +82,7 @@ export class Enemy{
   Die() {
     if ((this.app.stage.getChildIndex(this.sprite) >= 0)) {
         this.app.stage.removeChild(this.sprite);
+        this.app.stage.removeChild(this.graphic);
     }
     for (var i = 0; i < LevelManagement.getEnemies().length; i++) {
         if (LevelManagement.getEnemies()[i].id == this.id) {

@@ -1,6 +1,6 @@
 let money = 500;
-const towers = [];
-const enemies = [];
+let towers = [];
+let enemies = [];
 let health = 100;
 let score = 0;
 let enemyHP = 40;
@@ -12,6 +12,44 @@ let bullets = []
 export default class LevelManagement {
   constructor(money) {
     this.money = money
+  }
+
+  static resetVariable() {
+    let money = 500;
+    let towers = [];
+    let enemies = [];
+    let health = 100;
+    let score = 0;
+    let enemyHP = 40;
+    let enemySpeed = 11;
+    let enemiesN = 6;
+    let enemyID = 0;
+    let bullets = []
+  }
+
+  static resetTowers(app) {
+    for (let i = 0; i < this.getTowers().length; i++) {
+      app.stage.removeChild(this.getTowers()[i].sprite);
+      app.stage.removeChild(this.getTowers()[i].graphic)
+      
+    }
+  }
+
+  static resetEnemies(app) {
+    for (let i = 0; i < this.getEnemies().length; i++) {
+      app.stage.removeChild(this.getEnemies()[i].sprite);
+      app.stage.removeChild(this.getEnemies()[i].graphic)
+      
+    }
+  }
+
+  static resetBullets(app) {
+    for (let i = 0; i < this.getBulletsArray().length; i++) {
+      console.log('bullet', this.getBulletsArray()[i].sprite)
+      app.stage.removeChild(this.getBulletsArray()[i].sprite);
+      // app.stage.removeChild(this.getBulletsArray()[i].graphic)
+      
+    }
   }
 
   static getMoney() {

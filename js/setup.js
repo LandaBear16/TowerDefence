@@ -24,54 +24,15 @@ let displayMenu = false;
 
 export const setup = () => {
   app = new PIXI.Application({ backgroundColor: 0x1099bb, width: 920, height: 640 });
-  document.body.appendChild(app.view);
+  // document.body.appendChild(app.view);
+  document.getElementById('gameDiv').append(app.view)
 
-  // console.log('money: ', LEVEL.LevelManagement.getMoney())
-  
-  // $("#daGame").append(app.view);
-
-  // $("#inputPanel").fadeOut();
-// function lost() {
-//     $("#points").text("You have won " + score + " points! Well played");
-//     $("#inputPanel").fadeIn();
-// }
-
-// function resetGame() {
-//     //enemy settings
-//     enemyHP = 40;
-//     enemySpeed = 11;
-//     enemiesN = 6;
-//     enemyID = 0;
-
-//     //ui elements
-//     health = 100;
-//     money = 500;
-//     score = 0;
-// }
-
-// $("#submit").on("click", function () {
-//     addNewScore($("#name").val(), score);
-//     resetGame();
-//     $("#inputPanel").fadeOut();
-// });
-
-// $("#newGame").on("click", function () {
-//     $("#inputPanel").fadeOut();
-//     resetGame();
-// });
-
-// $(".glyphicon").on("click", function () {
-//     if ($(this).hasClass("glyphicon-volume-off")) {
-//         $(this).removeClass("glyphicon-volume-off");
-//         $(this).addClass("glyphicon-volume-up");
-//         // soundTrack.stop();
-//     } else {
-//         $(this).removeClass("glyphicon-volume-up");
-//         $(this).addClass("glyphicon-volume-off");
-//         console.log("vlez");
-//         // soundTrack.play();
-//     }
-// });
+  document.getElementById('backToMenu').addEventListener('click', () => {
+    console.log('bullets array', LevelManagement.getBulletsArray())
+    LevelManagement.resetTowers(app)
+    LevelManagement.resetEnemies(app)
+    LevelManagement.resetVariable()
+  })
   
   // **** SET BACKGROUND MAP ******
   var map = new PIXI.Sprite(PIXI.Texture.from(mapbackground));

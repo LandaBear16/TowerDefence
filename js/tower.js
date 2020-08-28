@@ -12,6 +12,7 @@ export class Tower{
     this.y = y;
     this.pos = new Vector(x, y)
     this.distanceVector = new Vector(0, 0)
+    this.graphic = new PIXI.Graphics()
     this.sprite.position = new Vector(x - 32, y - 32)
     this.sprite.pos = new Vector(x - 32, y - 32)
     this.sprite.pivot.x = 32;
@@ -23,11 +24,10 @@ export class Tower{
   }
 
   drawRange(){
-    const graphics = new PIXI.Graphics();
-    graphics.lineStyle(2, 0xFEEB77, 1);
-    graphics.drawCircle(this.sprite.position.x, this.sprite.position.y, this.range);
-    graphics.endFill();
-    this.app.stage.addChild(graphics);
+    this.graphic.lineStyle(2, 0xFEEB77, 1);
+    this.graphic.drawCircle(this.sprite.position.x, this.sprite.position.y, this.range);
+    this.graphic.endFill();
+    this.app.stage.addChild(this.graphic);
   }
   
 
